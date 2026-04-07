@@ -1,0 +1,79 @@
+{
+  "targets": {
+    "mobile_market_primary": {
+      "appium": {
+        "platform_name": "Android",
+        "device_name": "emulator-5554",
+        "app_package": "com.example.primary",
+        "automation_name": "UiAutomator2",
+        "no_reset": true
+      },
+      "logging": {
+        "log_file": "mobile_market_primary.log"
+      },
+      "selectors": {
+        "product_title_ids": ["com.example.primary:id/itemTitle"],
+        "product_list_ready_ids": ["com.example.primary:id/itemList"],
+        "sticky_buttons_id": "com.example.primary:id/stickyButtons",
+        "bottom_nav_products_id": "com.example.primary:id/bottomNavProducts",
+        "filter_button_id": "com.example.primary:id/filterButton",
+        "sort_area_id": "com.example.primary:id/sortArea",
+        "description_input_id": "com.example.primary:id/descriptionInput",
+        "price_input_id": "com.example.primary:id/priceInput",
+        "approval_button_id": "com.example.primary:id/approvalButton",
+        "earning_price_xpath": "//android.widget.TextView[@resource-id=\"com.example.primary:id/price\"]",
+        "earning_price_submit_xpath": "//android.widget.Button[@resource-id=\"com.example.primary:id/priceSubmit\"]",
+        "sort_lowest_price_xpath": "//android.widget.CheckedTextView[@text=\"Lowest Price\"]"
+      },
+      "texts": {
+        "products_tab": "Items"
+      }
+    },
+    "mobile_market_secondary": {
+      "appium": {
+        "platform_name": "Android",
+        "device_name": "emulator-5554",
+        "app_package": "com.example.secondary",
+        "automation_name": "UiAutomator2",
+        "no_reset": true
+      },
+      "logging": {
+        "refresh_log_file": "mobile_market_secondary_refresh.log",
+        "price_log_file": "mobile_market_secondary_price.log"
+      },
+      "settings": {
+        "new_command_timeout": 600,
+        "wait_for_idle_timeout": 0
+      },
+      "selectors": {
+        "account_tab_selector": "new UiSelector().resourceId(\"com.example.secondary:id/accountTab\")",
+        "listing_cover_id": "com.example.secondary:id/itemCover",
+        "edit_button_id": "com.example.secondary:id/editButton",
+        "publish_button_id": "com.example.secondary:id/publishButton",
+        "list_price_id": "com.example.secondary:id/listPrice",
+        "price_choice_selector_template": "new UiSelector().resourceId(\"com.example.secondary:id/priceChoice\").textContains(\"{current_price}\")",
+        "popup_save_button_id": "com.example.secondary:id/saveButton"
+      }
+    },
+    "browser_market_primary": {
+      "logging": {
+        "log_file": "browser_market_primary.log"
+      },
+      "urls": {
+        "login": "https://example.com/login",
+        "inventory": "https://example.com/store/items"
+      },
+      "selectors": {
+        "popup_close_css": "button.modal-close",
+        "username_field_name": "username",
+        "password_field_name": "password",
+        "page_size_dropdown_xpath": "//div[@data-role='page-size']",
+        "page_size_option_xpath": "//div[@data-value='50']",
+        "editable_price_css": ".editable-price",
+        "editable_input_css": ".editable-input input",
+        "editable_submit_css": ".editable-submit",
+        "next_page_xpath": "//a[contains(@class, 'next-page')]"
+      }
+    }
+  }
+}

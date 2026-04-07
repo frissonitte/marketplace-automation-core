@@ -1,0 +1,5 @@
+*.log
+appium_sessions/
+__pycache__/
+.vscode/
+venv/
