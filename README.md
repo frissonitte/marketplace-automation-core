@@ -1,5 +1,3 @@
-<img width="750" height="450" alt="image" src="https://github.com/user-attachments/assets/42023710-59ce-4440-9d09-81a5a8ebfa12" />
-
 # Marketplace Automation Core
 
 `marketplace-automation-core` is a Python automation project built to explore how marketplace-style workflows can be organized in a structured and reusable way.
